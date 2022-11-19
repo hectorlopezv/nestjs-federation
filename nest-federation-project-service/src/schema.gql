@@ -1,0 +1,24 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateProjectInput {
+  code: Int!
+  name: String!
+}
+
+type Mutation {
+  createProject(project: CreateProjectInput!): Project!
+  removeProject(id: String!): Project!
+}
+
+type Project {
+  code: Int!
+  id: ID!
+  name: String!
+}
+
+type Query {
+  getAllProjects: [Project!]!
+  project(id: String!): Project!
+}
